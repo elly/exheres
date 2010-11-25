@@ -8,7 +8,7 @@ require scm-git
 SLOT="0"
 DOWNLOADS=""
 HOMEPAGE="http://rephial.org"
-LICENSES="GPLv2"
+LICENCES="GPLv2"
 SUMMARY="A roguelike game with non-persistent levels"
 PLATFORMS="~amd64 ~x86"
 DEPENDENCIES="
