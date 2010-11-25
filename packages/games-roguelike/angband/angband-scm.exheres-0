@@ -1,0 +1,21 @@
+# Copyright 2010 Elly Jones
+# GPLv2
+
+SCM_REPOSITORY="git://github.com/angband/angband.git"
+
+require scm-git
+
+SLOT="0"
+DOWNLOADS=""
+HOMEPAGE="http://rephial.org"
+LICENSES="GPLv2"
+SUMMARY="A roguelike game with non-persistent levels"
+PLATFORMS="~amd64 ~x86"
+DEPENDENCIES="
+	build+run:
+		sys-libs/ncurses
+"
+
+MYOPTIONS=""
+
+DEFAULT_SRC_CONFIGURE_PARAMS=(--disable-x11 --disable-sdl)
