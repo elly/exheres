@@ -3,7 +3,7 @@
 
 SCM_REPOSITORY="git://github.com/angband/angband.git"
 
-require scm-git
+require scm-git autotools
 
 SLOT="0"
 DOWNLOADS=""
@@ -19,3 +19,8 @@ DEPENDENCIES="
 MYOPTIONS=""
 
 DEFAULT_SRC_CONFIGURE_PARAMS=(--disable-x11 --disable-sdl)
+
+src_prepare() {
+	default
+	eautoconf
+}
