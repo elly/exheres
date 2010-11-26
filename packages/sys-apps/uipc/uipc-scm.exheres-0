@@ -18,7 +18,3 @@ DEPENDENCIES="
 "
 
 MYOPTIONS=""
-
-src_configure () {
-	# Nada
-}
