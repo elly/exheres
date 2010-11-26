@@ -1,0 +1,24 @@
+# Copyright 2010 Elly Jones
+# GPLv2
+
+SCM_REPOSITORY="git://github.com/elly/uipc.git"
+
+require scm-git
+
+SLOT="0"
+DOWNLOADS=""
+HOMEPAGE="http://github.com/elly/uipc/"
+LICENCES="GPLv2"
+SUMMARY="A tiny ipc daemon"
+PLATFORMS="~amd64 ~x86"
+DEPENDENCIES="
+	build+run:
+		group/uipc
+		user/uipc
+"
+
+MYOPTIONS=""
+
+src_configure () {
+	# Nada
+}
