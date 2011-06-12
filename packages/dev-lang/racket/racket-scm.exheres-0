@@ -1,0 +1,22 @@
+# Copyright 2010 Elly Jones
+# GPLv2
+
+SCM_REPOSITORY="git://git.racket-lang.org/plt.git"
+
+require scm-git
+
+SLOT="0"
+DOWNLOADS=""
+HOMEPAGE="http://www.racket-lang.org"
+LICENCES="LGPLv2"
+SUMMARY="A mature, full-featured Scheme-like language with a focus on teaching."
+PLATFORMS="~amd64 ~x86"
+DEPENDENCIES="
+"
+
+MYOPTIONS=""
+
+src_prepare() {
+	default
+	WORK="${WORK}/src"
+}
