@@ -12,13 +12,21 @@ LICENCES="GPLv2"
 SUMMARY="A roguelike game with non-persistent levels"
 PLATFORMS="~amd64 ~x86"
 DEPENDENCIES="
-	build+run:
-		sys-libs/ncurses
+	curses? ( sys-libs/ncurses )
+	X? ( x11-libs/libX11 )
+	gtk? ( x11-libs/gtk+[>=2] )
 "
 
-MYOPTIONS=""
+# no sdl support for lack of an sdl package...
 
-DEFAULT_SRC_CONFIGURE_PARAMS=(--disable-x11 --disable-sdl)
+MYOPTIONS="
+	X [[ description = [ X11 frontend ] ]]
+	sdl [[ description = [ SDL frontend ] ]]
+	sdl-mixer [[ description = [ Use SDL mixer for sound ] ]]
+	curses [[ description = [ ncurses frontend ] ]]
+	gtk [[ description = [ gtk frontend ] ]]
+	stats [[ description = [ support stats-gathering mode ] ]]
+"
 
 src_prepare() {
 	default
