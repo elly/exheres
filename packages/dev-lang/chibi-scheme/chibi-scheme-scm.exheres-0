@@ -1,0 +1,17 @@
+# Copyright 2011 Elly Jones
+# GPLv2
+
+SCM_REPOSITORY="https://chibi-scheme.googlecode.com/hg/"
+
+require scm-hg
+
+SLOT="0"
+DOWNLOADS=""
+HOMEPAGE="http://synthcode.com/wiki/chibi-scheme"
+LICENCES="BSD"
+SUMMARY="A tiny scheme implementation for use as an extension language."
+PLATFORMS="amd64 x86"
+DEPENDENCIES="
+"
+
+MYOPTIONS=""
