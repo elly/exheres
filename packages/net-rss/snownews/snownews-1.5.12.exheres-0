@@ -20,3 +20,8 @@ MYOPTIONS="
 	ssl [[ description = [ Use OpenSSL for https feeds ] ]]
 	utf8 [[ description = [ UTF-8 support ] ]]
 "
+
+src_configure () {
+	# snownews has a nonstandard configure that only takes --prefix
+	edo ./configure --prefix=/usr
+}
