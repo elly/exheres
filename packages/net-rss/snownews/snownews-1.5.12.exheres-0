@@ -4,7 +4,6 @@
 DOWNLOADS="http://kiza.kcore.de/media/software/${PN}/${PNV}.tar.gz"
 
 SLOT="0"
-DOWNLOADS=""
 HOMEPAGE="http://kiza.kcore.de"
 LICENCES="GPLv2"
 SUMMARY="A curses-based rss reader"
