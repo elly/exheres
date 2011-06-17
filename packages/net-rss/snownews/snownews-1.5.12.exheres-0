@@ -11,7 +11,7 @@ SUMMARY="A curses-based rss reader"
 PLATFORMS="amd64 x86"
 DEPENDENCIES="
 	dev-libs/libxml2
-	text-libs/libiconv
+	utf8? ( text-libs/libiconv )
 	ssl? ( dev-libs/openssl )
 "
 
@@ -19,4 +19,5 @@ DEPENDENCIES="
 
 MYOPTIONS="
 	ssl [[ description = [ Use OpenSSL for https feeds ] ]]
+	utf8 [[ description = [ UTF-8 support ] ]]
 "
