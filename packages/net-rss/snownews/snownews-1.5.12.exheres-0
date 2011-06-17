@@ -1,7 +1,7 @@
 # Copyright 2011 Elly Jones
 # GPLv2
 
-URI="http://kiza.kcore.de/media/software/snownews/snownews-1.5.12.tar.gz"
+DOWNLOADS="http://kiza.kcore.de/media/software/${PN}/${PNV}.tar.gz"
 
 SLOT="0"
 DOWNLOADS=""
