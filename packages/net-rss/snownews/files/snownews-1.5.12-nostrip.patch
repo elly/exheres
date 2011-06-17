@@ -2,8 +2,8 @@ Source: Written by Elly Jones
 Upstream: No
 Reason: Don't strip binaries
 
---- Makefile
-+++ Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -35,7 +35,7 @@
  	$(CC) $(OBJFILES) -o snownews $(LDFLAGS)
  
@@ -13,8 +13,8 @@ Reason: Don't strip binaries
 
  locales:
  	for L in $(LOCALES); do \
---- Makefile
-+++ Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -60,7 +60,7 @@
  	if [ ! -d "$(DESTDIR)$(PREFIX)/bin" ]; then \
  		mkdir -p $(DESTDIR)$(PREFIX)/bin; \
