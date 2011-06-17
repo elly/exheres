@@ -1,7 +1,7 @@
 # Copyright 2010 Elly Jones
 # GPLv2
 
-SCM_REPOSITORY="svn://daper.net/moc/trunk"
+SCM_REPOSITORY="svn://daper.net/moc"
 
 require scm-svn autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.11 ] ]
 
@@ -12,9 +12,12 @@ LICENCES="GPLv2"
 SUMMARY="A client-server music player"
 PLATFORMS="amd64 x86"
 DEPENDENCIES="
+	sys-libs/db
 	mp3? ( media-libs/libmad media-libs/libid3tag )
 	flac? ( media-libs/flac )
 	ogg? ( media-libs/libvorbis )
+	aac? ( media-libs/faad2 )
+	alsa? ( sys-sound/alsa-lib )
 	curl? ( net-misc/curl )
 "
 
@@ -24,6 +27,8 @@ MYOPTIONS="
 	mp3 [[ description = [ MP3 codec support ] ]]
 	flac [[ description = [ Free Lossless Audio Codec support ] ]]
 	ogg [[ description = [ Ogg Vorbis codec support ] ]]
+	aac [[ description = [ Advanced Audio Codec support ] ]]
+	alsa [[ description = [ ALSA output support ] ]]
 	curl [[ description = [ Use curl for internet streaming ] ]]
 "
 
