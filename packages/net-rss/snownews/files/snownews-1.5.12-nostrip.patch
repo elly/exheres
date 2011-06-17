@@ -1,0 +1,25 @@
+Source: Written by Elly Jones
+Upstream: No
+Reason: Don't strip binaries
+
+--- Makefile
++++ Makefile
+@@ -35,7 +35,7 @@
+         $(CC) $(OBJFILES) -o snownews $(LDFLAGS)
+ 
+ snownews-static: manpages locales
+-        $(CC) -s -static -o snownews main.c netio.c interface.c xmlparse.c updatecheck.c conversions.c dialog.c ui-support.c categories.c about.c cookies.c setup.c net-support.c digcalc.c md5.c filters.c io-internal.c zlib_interface.c os-support.c support.c $(CFLAGS) $(LDFLAGS) 
++        $(CC) -static -o snownews main.c netio.c interface.c xmlparse.c updatecheck.c conversions.c dialog.c ui-support.c categories.c about.c cookies.c setup.c net-support.c digcalc.c md5.c filters.c io-internal.c zlib_interface.c os-support.c support.c $(CFLAGS) $(LDFLAGS) 
+
+locales:
+        for L in $(LOCALES); do \
+@@ -60,7 +60,7 @@
+ 	if [ ! -d "$(DESTDIR)$(PREFIX)/bin" ]; then \
+ 		mkdir -p $(DESTDIR)$(PREFIX)/bin; \
+ 	fi
+-	$(INSTALL) -s snownews $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL) snownews $(DESTDIR)$(PREFIX)/bin
+ 	$(INSTALL) opml2snow $(DESTDIR)$(PREFIX)/bin
+ 	if [ ! -f "$(DESTDIR)$(PREFIX)/bin/snow2opml" ]; then \
+ 		(cd $(DESTDIR)$(PREFIX)/bin && \
+
