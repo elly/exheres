@@ -1,0 +1,33 @@
+# Copyright 2010 Elly Jones
+# GPLv2
+
+SCM_REPOSITORY="svn://daper.net/moc/trunk"
+
+require scm-svn autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.11 ] ]
+
+SLOT="0"
+DOWNLOADS=""
+HOMEPAGE="http://moc.daper.net"
+LICENCES="GPLv2"
+SUMMARY="A client-server music player"
+PLATFORMS="amd64 x86"
+DEPENDENCIES="
+	mp3? ( media-libs/libmad media-libs/libid3tag )
+	flac? ( media-libs/flac )
+	ogg? ( media-libs/libvorbis )
+	curl? ( net-misc/curl )
+"
+
+# no sdl support for lack of an sdl package...
+
+MYOPTIONS="
+	mp3 [[ description = [ MP3 codec support ] ]]
+	flac [[ description = [ Free Lossless Audio Codec support ] ]]
+	ogg [[ description = [ Ogg Vorbis codec support ] ]]
+	curl [[ description = [ Use curl for internet streaming ] ]]
+"
+
+src_prepare() {
+	default
+	edo ./autogen.sh
+}

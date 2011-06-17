@@ -1,0 +1,22 @@
+# Copyright 2011 Elly Jones
+# GPLv2
+
+URI="http://kiza.kcore.de/media/software/snownews/snownews-1.5.12.tar.gz"
+
+SLOT="0"
+DOWNLOADS=""
+HOMEPAGE="http://kiza.kcore.de"
+LICENCES="GPLv2"
+SUMMARY="A curses-based rss reader"
+PLATFORMS="amd64 x86"
+DEPENDENCIES="
+	dev-libs/libxml2
+	text-libs/libiconv
+	ssl? ( dev-libs/openssl )
+"
+
+# no sdl support for lack of an sdl package...
+
+MYOPTIONS="
+	ssl [[ description = [ Use OpenSSL for https feeds ] ]]
+"
