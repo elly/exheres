@@ -1,7 +1,7 @@
 Index: ax_path_bdb.m4
 ===================================================================
---- ax_path_bdb.m4	(revision 2338)
-+++ ax_path_bdb.m4	(working copy)
+--- a/ax_path_bdb.m4	(revision 2338)
++++ b/ax_path_bdb.m4	(working copy)
 @@ -76,7 +76,7 @@
    # Check if --with-bdb-dir was specified.
    if test "x$with_bdb_dir" = "x" ; then
