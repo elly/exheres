@@ -4,6 +4,7 @@
 SCM_REPOSITORY="svn://daper.net/moc"
 
 require scm-svn autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.11 ] ]
+require flag-o-matic
 
 SLOT="0"
 DOWNLOADS=""
@@ -37,6 +38,7 @@ DEFAULT_SRC_PREPARE_PATCHES=(
 )
 
 src_prepare() {
+	append-flags -I/usr/include/db4.6 # ???
 	default
 	edo ./autogen.sh
 }
