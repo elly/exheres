@@ -1,0 +1,13 @@
+Index: ax_path_bdb.m4
+===================================================================
+--- ax_path_bdb.m4	(revision 2338)
++++ ax_path_bdb.m4	(working copy)
+@@ -76,7 +76,7 @@
+   # Check if --with-bdb-dir was specified.
+   if test "x$with_bdb_dir" = "x" ; then
+     # No option specified, so just search the system.
+-    AX_PATH_BDB_NO_OPTIONS([$1], [HIGHEST], [
++    AX_PATH_BDB_NO_OPTIONS([$1], [ENVFIRST], [
+       ax_path_bdb_ok=yes
+     ])
+    else

@@ -32,6 +32,10 @@ MYOPTIONS="
 	curl [[ description = [ Use curl for internet streaming ] ]]
 "
 
+DEFAULT_SRC_PREPARE_PATCHES=(
+	"${FILES}"/${PN}-bdb-use-env.patch
+)
+
 src_prepare() {
 	default
 	edo ./autogen.sh
